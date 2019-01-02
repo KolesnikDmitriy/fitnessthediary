@@ -1,11 +1,25 @@
 const User = require('./User');
 const assert = require('assert');
 
-function createNewUser(){
+function newUser() {
   return new User();
 }
+function testUserCanStartWorkout() {
+  user = newUser();
+  res = user.startWorkout();
+  assert.deepEqual(res, 'Workout started!');
+}
 
-user = createNewUser();
+function testUserCanEndWorkout() {
+  user = newUser();
+  user.endWorkout();
+  res = user.endWorkout();
+  assert.deepEqual(res, 'Workout complited!');
+}
 
-assert.deepEqual(user.startWorkout(), 'Workout started!');
-assert.deepEqual(user.endWorkout(), 'Workout complited!');
+function runTests() {
+  testUserCanStartWorkout();
+  testUserCanEndWorkout();
+}
+
+runTests();

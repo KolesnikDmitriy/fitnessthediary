@@ -1,9 +1,9 @@
 module.exports = class Workout {
-  start(){
+  start() {
     return 'Workout started!';
   }
-  
-  end(){
+
+  end() {
     return 'Workout complited!';
   }
-}
+};

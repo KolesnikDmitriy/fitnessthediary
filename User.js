@@ -1,15 +1,15 @@
 const Workout = require('./Workout');
 
-module.exports = class User{
-  constructor(){
+module.exports = class User {
+  constructor() {
     this.workout = new Workout();
   }
 
-  startWorkout(){ 
+  startWorkout() {
     return this.workout.start();
   }
-  
-  endWorkout(){
+
+  endWorkout() {
     return this.workout.end();
   }
-}
+};
