@@ -25,13 +25,20 @@ function testUserCanEndWorkout() {
 function testUserCantEndWorkoutBeforeStart() {
   user = newUser();
   res = user.endWorkout();
-  assert.deepEqual(res, "Error! Workout can't end before start");
+  assert.deepEqual(res, "Error! Workout can't be completed before start");
+}
+
+function testUserCantStartTwoWorkouts() {
+  user = withWorkout(newUser());
+  res = user.startWorkout();
+  assert.deepEqual(res, "Error! Can't start two workouts at the same time");
 }
 
 function runTests() {
   testUserCanStartWorkout();
   testUserCanEndWorkout();
   testUserCantEndWorkoutBeforeStart();
+  testUserCantStartTwoWorkouts();
 }
 
 runTests();
