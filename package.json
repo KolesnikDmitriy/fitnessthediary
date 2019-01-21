@@ -1,0 +1,22 @@
+{
+  "name": "fitnessthediary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha User.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KolesnikDmitriy/fitnessthediary.git"
+  },
+  "author": "Dima Kolesnik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KolesnikDmitriy/fitnessthediary/issues"
+  },
+  "homepage": "https://github.com/KolesnikDmitriy/fitnessthediary#readme",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}

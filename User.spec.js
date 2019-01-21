@@ -10,35 +10,28 @@ function withWorkout(user) {
   return user;
 }
 
-function testUserCanStartWorkout() {
-  user = newUser();
-  res = user.startWorkout();
-  assert.deepEqual(res, 'Workout started!');
-}
+describe('User', () => {
+  it('can start workout', () => {
+    user = newUser();
+    res = user.startWorkout();
+    assert.deepEqual(res, 'Workout started!');
+  });
 
-function testUserCanEndWorkout() {
-  user = withWorkout(newUser());
-  res = user.endWorkout();
-  assert.deepEqual(res, 'Workout complited!');
-}
+  it('can end workout', () => {
+    user = withWorkout(newUser());
+    res = user.endWorkout();
+    assert.deepEqual(res, 'Workout complited!');
+  });
 
-function testUserCantEndWorkoutBeforeStart() {
-  user = newUser();
-  res = user.endWorkout();
-  assert.deepEqual(res, "Error! Workout can't be completed before start");
-}
+  it("can't end workout before start", () => {
+    user = newUser();
+    res = user.endWorkout();
+    assert.deepEqual(res, "Error! Workout can't be completed before start");
+  });
 
-function testUserCantStartTwoWorkouts() {
-  user = withWorkout(newUser());
-  res = user.startWorkout();
-  assert.deepEqual(res, "Error! Can't start two workouts at the same time");
-}
-
-function runTests() {
-  testUserCanStartWorkout();
-  testUserCanEndWorkout();
-  testUserCantEndWorkoutBeforeStart();
-  testUserCantStartTwoWorkouts();
-}
-
-runTests();
+  it("can't start two workouts", () => {
+    user = withWorkout(newUser());
+    res = user.startWorkout();
+    assert.deepEqual(res, "Error! Can't start two workouts at the same time");
+  });
+});
