@@ -16,10 +16,8 @@
     "url": "https://github.com/KolesnikDmitriy/fitnessthediary/issues"
   },
   "homepage": "https://github.com/KolesnikDmitriy/fitnessthediary#readme",
-  "devDpendencies": {
-    "mocha": "^5.2.0"
-  },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mocha": "^5.2.0"
   }
 }
