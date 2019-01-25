@@ -2,6 +2,6 @@
   "alias": ["fitnessthediary"],
   "builds": [
     { "src": "server.js", "use": "@now/node-server" },
-    { "src": "./public", "use": "@now/static" }
+    { "src": "public/index.html", "use": "@now/static" }
   ]
 }
