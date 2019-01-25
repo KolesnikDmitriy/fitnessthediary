@@ -1,3 +1,5 @@
+host = 'https://fitnessthediary.now.sh/';
+
 const app = new Vue({
   el: '#app',
   data: {
@@ -6,12 +8,12 @@ const app = new Vue({
   methods: {
     start: () => {
       axios
-        .get('http://localhost:3000/workout/start')
+        .get(`${host}workout/start`)
         .then(response => (app.message = response.data));
     },
     end: () => {
       axios
-        .get('http://localhost:3000/workout/end')
+        .get(`${host}workout/end`)
         .then(response => (app.message = response.data));
     }
   }
