@@ -6,8 +6,13 @@ const app = new Vue({
   methods: {
     start: () => {
       axios
-        .get('localhost:3000/workout/start')
-        .then(response => (app.message = response));
+        .get('http://localhost:3000/workout/start')
+        .then(response => (app.message = response.data));
+    },
+    end: () => {
+      axios
+        .get('http://localhost:3000/workout/end')
+        .then(response => (app.message = response.data));
     }
   }
 });
