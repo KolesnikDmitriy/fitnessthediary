@@ -5,7 +5,9 @@ const app = new Vue({
   },
   methods: {
     start: () => {
-      app.message = app.message + '!';
+      axios
+        .get('localhost:3000/workout/start')
+        .then(response => (app.message = response));
     }
   }
 });
