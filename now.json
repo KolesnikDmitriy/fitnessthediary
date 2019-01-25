@@ -1,3 +1,7 @@
 {
-  "alias": ["fitnessthediary"]
+  "alias": ["fitnessthediary"],
+  "builds": [
+    { "src": "server.js", "use": "@now/node" },
+    { "src": "./public", "use": "@now/static" }
+  ]
 }
