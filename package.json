@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/KolesnikDmitriy/fitnessthediary#readme",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
     "mocha": "^5.2.0"
   }
 }
